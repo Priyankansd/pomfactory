@@ -1,5 +1,7 @@
 package com.crm.qa.testlayer;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -35,17 +37,17 @@ public class Homepagetest extends baseclass{
 	@Test(priority=1)
 	public void verifyhomeptitletest() {
    String title=homepage.verifyhomepagetitle();
-		Assert.assertEquals(title, "CRMPRO");
+		AssertJUnit.assertEquals(title, "CRMPRO");
 	}
 	
 	@Test(priority=2)
 	public void verifyname() {
 		tu.switchtoframe();
    boolean name=homepage.presenceofname();
-		Assert.assertTrue(name);
+		AssertJUnit.assertTrue(name);
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void contactclick() {
 		tu.switchtoframe();
 		 contactspage =homepage.contacticon();

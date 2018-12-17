@@ -1,5 +1,7 @@
 package com.crm.qa.testlayer;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -46,7 +48,7 @@ public void displaycontactname()
 {
 	//tu.switchtoframe();
 boolean contact=cp.checkcontactdisplay();
-	Assert.assertTrue(contact);
+	AssertJUnit.assertTrue(contact);
 }
 
 @Test

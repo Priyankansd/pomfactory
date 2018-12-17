@@ -1,5 +1,7 @@
 package com.crm.qa.testlayer;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -29,13 +31,13 @@ public class Logintest extends baseclass{
 	@Test
 	public void loginpagettitletest() {
 		String title=lp.gettitle();
-		 Assert.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
+		 AssertJUnit.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
 	}
 	
 	@Test
 	public void imgprsnc() {
 	boolean img=lp.prsenceofimg();
-	  Assert.assertTrue(img);
+	  AssertJUnit.assertTrue(img);
 	}
 	@Test(priority=3)
 	public void logintest() {
